@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C36326E-C05C-43F2-B0E1-3861E8F7C2FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DA\ADO\Data.cs" />
+    <Compile Include="DA\ADO\SqlHelper.cs" />
+    <Compile Include="DA\ADO\SqlQuery.cs" />
+    <Compile Include="FromBody\Categories\BranchFromBody.cs" />
+    <Compile Include="FromBody\Categories\DepartmentFromBody.cs" />
+    <Compile Include="FromBody\Categories\EmployeeFromBody.cs" />
+    <Compile Include="FromBody\Categories\TitleFromBody.cs" />
+    <Compile Include="FromBody\FromBodyBase.cs" />
+    <Compile Include="Interfaces\Categories\IBranch.cs" />
+    <Compile Include="Interfaces\Categories\ICustomer.cs" />
+    <Compile Include="Interfaces\Categories\IDepartment.cs" />
+    <Compile Include="Interfaces\Categories\IEmployee.cs" />
+    <Compile Include="Interfaces\Categories\ITitle.cs" />
+    <Compile Include="Interfaces\Systems\IAttachFiles.cs" />
+    <Compile Include="Models\Categories\Branch.cs" />
+    <Compile Include="Models\Categories\Contract.cs" />
+    <Compile Include="Models\Categories\Customer.cs" />
+    <Compile Include="Models\Categories\DaiLy.cs" />
+    <Compile Include="Models\Categories\Department.cs" />
+    <Compile Include="Models\Categories\Employee.cs" />
+    <Compile Include="Models\Categories\NhanVien.cs" />
+    <Compile Include="Models\Categories\Salary.cs" />
+    <Compile Include="Models\Categories\Title.cs" />
+    <Compile Include="Models\Systems\AttachFiles.cs" />
+    <Compile Include="Models\Systems\User.cs" />
+    <Compile Include="Models\Auditable.cs" />
+    <Compile Include="Models\Systems\Function.cs" />
+    <Compile Include="Models\Systems\MenuBar.cs" />
+    <Compile Include="Models\Systems\Role.cs" />
+    <Compile Include="Models\Systems\TaskPane.cs" />
+    <Compile Include="Models\Systems\UserRole.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Categories\BranchReopository.cs" />
+    <Compile Include="Repositories\Categories\CustomerRepository.cs" />
+    <Compile Include="Repositories\Categories\DaiLyRepository.cs" />
+    <Compile Include="Repositories\Categories\DepartmentRepository.cs" />
+    <Compile Include="Repositories\Categories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\Categories\TitleRepository.cs" />
+    <Compile Include="Repositories\Systems\AttachFilesRepository.cs" />
+    <Compile Include="Repositories\Systems\FunctionRepository.cs" />
+    <Compile Include="Repositories\Systems\MenuBarRepository.cs" />
+    <Compile Include="Repositories\Systems\TaskPaneRepository.cs" />
+    <Compile Include="Repositories\Systems\RoleRepository.cs" />
+    <Compile Include="Repositories\Systems\UserRepository.cs" />
+    <Compile Include="Response\Categories\BranchResponseValue.cs" />
+    <Compile Include="Response\Categories\DepartmentResponseValue.cs" />
+    <Compile Include="Response\Categories\EmployeeResponseValue.cs" />
+    <Compile Include="Response\Categories\ResponseValue.cs" />
+    <Compile Include="Response\Categories\TitleResponseValue.cs" />
+    <Compile Include="ViewModels\Categories\ChiNhanhViewModel.cs" />
+    <Compile Include="ViewModels\Categories\CustomerViewModel.cs" />
+    <Compile Include="ViewModels\Categories\DaiLyViewModel.cs" />
+    <Compile Include="ViewModels\Categories\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Categories\NhanVienViewModel.cs" />
+    <Compile Include="ViewModels\Systems\ActionViewModel.cs" />
+    <Compile Include="ViewModels\Systems\AttachFilesViewModel.cs" />
+    <Compile Include="ViewModels\Systems\ChangedPasswordViewModel.cs" />
+    <Compile Include="ViewModels\Systems\FunctionActionViewModel.cs" />
+    <Compile Include="ViewModels\Systems\FunctionViewModel.cs" />
+    <Compile Include="ViewModels\Systems\GetParameter.cs" />
+    <Compile Include="ViewModels\Systems\MenuBarViewModel.cs" />
+    <Compile Include="ViewModels\Systems\MessageViewModel.cs" />
+    <Compile Include="ViewModels\Systems\PermissionViewModel.cs" />
+    <Compile Include="ViewModels\Systems\ResponseValue.cs" />
+    <Compile Include="ViewModels\Systems\PagedResult.cs" />
+    <Compile Include="ViewModels\Systems\RoleViewModel.cs" />
+    <Compile Include="ViewModels\Systems\TaskPaneViewModel.cs" />
+    <Compile Include="ViewModels\Systems\UserViewModel.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DA\DAP\" />
+    <Folder Include="DA\XML\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApiClient\ApiClient.csproj">
+      <Project>{9383172B-49A8-447F-8931-A54859157A2A}</Project>
+      <Name>ApiClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{6B068B80-1212-44D4-B201-8E16ABA315DB}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

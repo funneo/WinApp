@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Branchs>
+	<Branch Id="4" Status="1">Delta Hà Nội</Branch>
+	<Branch Id="5" Status="0">Delta Hồ Chí Minh</Branch>
+</Branchs>
